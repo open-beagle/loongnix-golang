@@ -17,7 +17,7 @@ export GO_VERSION=1.20.2 && \
 curl http://ftp.loongnix.cn/toolchain/golang/go-1.20/abi1.0/go$GO_VERSION.linux-amd64.tar.gz > ./.tmp/go$GO_VERSION.linux-amd64.tar.gz
 
 # gcc
-curl http://ftp.loongnix.cn/toolchain/gcc/release/loongarch/gcc8/loongson-gnu-toolchain-8.3-x86_64-loongarch64-linux-gnu-rc1.1.tar.xz > ./.tmp/golang/loongson-gnu-toolchain-8.3-x86_64-loongarch64-linux-gnu-rc1.1.tar.xz 
+curl http://ftp.loongnix.cn/toolchain/gcc/release/loongarch/gcc8/loongson-gnu-toolchain-8.3.novec-x86_64-loongarch64-linux-gnu-rc1.1.tar.xz > ./.tmp/loongson-gnu-toolchain-8.3.novec-x86_64-loongarch64-linux-gnu-rc1.1.tar.xz
 
 # 上传至S3存储
 mc cp --recursive ./.tmp/ cache/vscode/loongarch64
