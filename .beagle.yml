@@ -2,6 +2,10 @@
 kind: pipeline
 name: loongnix-golang
 
+trigger:
+  branch:
+    - release-v1.20
+
 volumes:
   - name: docker
     host:
