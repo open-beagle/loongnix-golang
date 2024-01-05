@@ -17,9 +17,8 @@ echo "github.com/open-beagle/loongnix-golang" > ./.tmp/README.md
 
 # 1.20
 export GO_VERSION=1.21.5 && \
-curl http://ftp.loongnix.cn/toolchain/golang/go-1.20/abi1.0/go$GO_VERSION.linux-amd64.tar.gz > ./.tmp/go$GO_VERSION.linux-amd64.tar.gz && \
-# gcc
-curl hhttp://ftp.loongnix.cn/toolchain/gcc/release/loongarch/gcc8/loongson-gnu-toolchain-8.3-x86_64-loongarch64-linux-gnu-rc1.2.tar.xz > ./.tmp/loongson-gnu-toolchain-8.3-x86_64-loongarch64-linux-gnu-rc1.2.tar.xz
+curl http://ftp.loongnix.cn/toolchain/golang/go-1.21/abi1.0/go$GO_VERSION.linux-amd64.tar.gz > ./.tmp/go$GO_VERSION.linux-amd64.tar.gz && \
+curl http://ftp.loongnix.cn/toolchain/gcc/release/loongarch/gcc8/loongson-gnu-toolchain-8.3-x86_64-loongarch64-linux-gnu-rc1.2.tar.xz > ./.tmp/loongson-gnu-toolchain-8.3-x86_64-loongarch64-linux-gnu-rc1.2.tar.xz
 
 # 上传至S3存储
 mc cp --recursive ./.tmp/ cache/vscode/loongarch64
