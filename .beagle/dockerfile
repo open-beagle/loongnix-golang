@@ -13,9 +13,9 @@ ENV PATH=$GOROOT/bin:$GOPATH/bin:$PATH
 RUN apt update -y && \
 apt install -y curl wget xz-utils git && \
 mkdir -p /tmp/loongarch64/gcc && \
-curl https://cache.wodcloud.com/vscode/loongarch64/loongson-gnu-toolchain-8.3.novec-x86_64-loongarch64-linux-gnu-rc1.1.tar.xz > /tmp/loongarch64/loongson-gnu-toolchain-8.3.novec-x86_64-loongarch64-linux-gnu-rc1.1.tar.xz && \
-tar -xvf /tmp/loongarch64/loongson-gnu-toolchain-8.3.novec-x86_64-loongarch64-linux-gnu-rc1.1.tar.xz -C /tmp/loongarch64/gcc && \
-cp -r /tmp/loongarch64/gcc/loongson-gnu-toolchain-8.3.novec-x86_64-loongarch64-linux-gnu-rc1.1/* /usr/ && \
+curl https://cache.wodcloud.com/vscode/loongarch64/loongson-gnu-toolchain-8.3-x86_64-loongarch64-linux-gnu-rc1.2.tar.xz.tar.xz > /tmp/loongarch64/loongson-gnu-toolchain-8.3-x86_64-loongarch64-linux-gnu-rc1.2.tar.xz.tar.xz && \
+tar -xvf /tmp/loongarch64/loongson-gnu-toolchain-8.3-x86_64-loongarch64-linux-gnu-rc1.2.tar.xz.tar.xz -C /tmp/loongarch64/gcc && \
+cp -r /tmp/loongarch64/gcc/loongson-gnu-toolchain-8.3-x86_64-loongarch64-linux-gnu-rc1.2.tar.xz/* /usr/ && \
 mkdir -p /tmp/loongarch64/golang && \
 curl https://cache.wodcloud.com/vscode/loongarch64/go1.20.12.linux-amd64.tar.gz > /tmp/loongarch64/go1.20.12.linux-amd64.tar.gz && \
 tar xzvf /tmp/loongarch64/go1.20.12.linux-amd64.tar.gz -C /tmp/loongarch64/golang && \
