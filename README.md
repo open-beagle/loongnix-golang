@@ -13,10 +13,10 @@ OpenEuler 22.03及以上操作系统
 # 清空目录
 rm -rf ./.tmp && \
 mkdir -p ./.tmp && \
-echo "github.com/open-beagle/loongnix-golang:release-v1.20" > ./.tmp/README.md
+echo "github.com/open-beagle/loongnix-golang" > ./.tmp/README.md
 
 # 1.20
-export GO_VERSION=1.20.12 && \
+export GO_VERSION=1.21.5 && \
 curl http://ftp.loongnix.cn/toolchain/golang/go-1.20/abi1.0/go$GO_VERSION.linux-amd64.tar.gz > ./.tmp/go$GO_VERSION.linux-amd64.tar.gz && \
 # gcc
 curl http://ftp.loongnix.cn/toolchain/gcc/release/loongarch/gcc8/loongson-gnu-toolchain-8.3.novec-x86_64-loongarch64-linux-gnu-rc1.1.tar.xz > ./.tmp/loongson-gnu-toolchain-8.3.novec-x86_64-loongarch64-linux-gnu-rc1.1.tar.xz
