@@ -23,3 +23,9 @@ curl http://ftp.loongnix.cn/toolchain/gcc/release/loongarch/gcc8/loongson-gnu-to
 # 上传至S3存储
 mc cp --recursive ./.tmp/ cache/vscode/loongarch64
 ```
+
+## debug
+
+```bash
+tar -xvf ./.tmp/loongson-gnu-toolchain-8.3-x86_64-loongarch64-linux-gnu-rc1.2.tar.xz -C ./.tmp/
+```
