@@ -42,9 +42,9 @@ steps:
       dockerfile: .beagle/dockerfile
       base: registry.cn-qingdao.aliyuncs.com/wod/debian:bullseye
       repo: wod/golang
-      version: 1.21.11
+      version: "1.21.11"
       channel: loongnix
-      args: 'TARGETOS=linux,TARGETARCH=amd64'
+      args: "TARGETOS=linux,TARGETARCH=amd64,GO_VERSION=1.21.11"
       registry: registry.cn-qingdao.aliyuncs.com
       registry_user:
         from_secret: REGISTRY_USER_ALIYUN

@@ -25,8 +25,8 @@ mc cp ./.tmp/go$GO_VERSION.linux-amd64.tar.gz cache/vscode/loongarch64/go$GO_VER
 # http://ftp.loongnix.cn/toolchain/gcc/release/loongarch/gcc8/loongson-gnu-toolchain-8.3-x86_64-loongarch64-linux-gnu-rc1.5.tar.xz
 export LOONGIX_GCC=gnu-toolchain-8.3
 export LOONGIX_GCC_VERSION=rc1.5 && \
-curl http://ftp.loongnix.cn/toolchain/gcc/release/loongarch/gcc8/loongson-$LOONGIX_GCC-x86_64-loongarch64-linux-gnu-$LOONGIX_GCC_VERSION.tar.xz > ./.tmp/loongson$LOONGIX_GCC-x86_64-loongarch64-linux-gnu-$LOONGIX_GCC_VERSION.tar.xz && \
-mc cp ./.tmp/loongson$LOONGIX_GCC-x86_64-loongarch64-linux-gnu-$LOONGIX_GCC_VERSION.tar.xz cache/vscode/loongarch64/loongson$LOONGIX_GCC-x86_64-loongarch64-linux-gnu-$LOONGIX_GCC_VERSION.tar.xz
+curl http://ftp.loongnix.cn/toolchain/gcc/release/loongarch/gcc8/loongson-$LOONGIX_GCC-x86_64-loongarch64-linux-gnu-$LOONGIX_GCC_VERSION.tar.xz > ./.tmp/loongson-$LOONGIX_GCC-x86_64-loongarch64-linux-gnu-$LOONGIX_GCC_VERSION.tar.xz && \
+mc cp ./.tmp/loongson-$LOONGIX_GCC-x86_64-loongarch64-linux-gnu-$LOONGIX_GCC_VERSION.tar.xz cache/vscode/loongarch64/loongson-$LOONGIX_GCC-x86_64-loongarch64-linux-gnu-$LOONGIX_GCC_VERSION.tar.xz
 ```
 
 ## debug
