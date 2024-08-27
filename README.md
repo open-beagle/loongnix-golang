@@ -15,10 +15,10 @@ rm -rf ./.tmp && \
 mkdir -p ./.tmp && \
 echo "github.com/open-beagle/loongnix-golang" > ./.tmp/README.md
 
-# golang1.21
-# http://ftp.loongnix.cn/toolchain/golang/go-1.21/abi1.0/go1.21.11.linux-amd64.tar.gz
-export GO_VERSION=1.21.11 && \
-curl http://ftp.loongnix.cn/toolchain/golang/go-1.21/abi1.0/go$GO_VERSION.linux-amd64.tar.gz > ./.tmp/go$GO_VERSION.linux-amd64.tar.gz && \
+# golang
+# http://ftp.loongnix.cn/toolchain/golang/go-1.22/abi1.0/go1.22.4.linux-amd64.tar.gz
+export GO_VERSION=1.22.4 && \
+curl http://ftp.loongnix.cn/toolchain/golang/go-1.22/abi1.0/go$GO_VERSION.linux-amd64.tar.gz > ./.tmp/go$GO_VERSION.linux-amd64.tar.gz && \
 mc cp ./.tmp/go$GO_VERSION.linux-amd64.tar.gz cache/vscode/loongarch64/go$GO_VERSION.linux-amd64.tar.gz
 
 # gcc8
