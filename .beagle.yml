@@ -2,6 +2,10 @@
 kind: pipeline
 name: docker
 
+trigger:
+  branch:
+    - release-v1.22
+
 volumes:
   - name: docker
     host:
@@ -40,7 +44,7 @@ steps:
       repo: wod/golang
       version: "1.22.9"
       channel: loongnix
-      args: "TARGETOS=linux,TARGETARCH=amd64,GO_VERSION=1.22.9"
+      args: "TARGETOS=linux,TARGETARCH=amd64,GO_VERSION=1.22.9,LOONGIX_GCC_VERSION=rc1.6"
       registry: registry.cn-qingdao.aliyuncs.com
       registry_user:
         from_secret: REGISTRY_USER_ALIYUN
@@ -50,6 +54,10 @@ steps:
 ---
 kind: pipeline
 name: harbor
+
+trigger:
+  branch:
+    - release-v1.22
 
 depends_on:
   - docker
