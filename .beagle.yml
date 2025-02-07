@@ -17,11 +17,11 @@ steps:
       restore: true
       mount:
         - ./.git
-      endpoint: https://cache.wodcloud.com
+      endpoint: https://cache.ali.wodcloud.com
       access_key:
-        from_secret: ACCESS_KEY_MINIO
+        from_secret: S3_ACCESS_KEY_ALIYUN
       secret_key:
-        from_secret: SECRET_KEY_MINIO
+        from_secret: S3_SECRET_KEY_ALIYUN
 
   - name: fetch
     image: registry.cn-qingdao.aliyuncs.com/wod/devops-git:1.0
@@ -38,9 +38,9 @@ steps:
       dockerfile: .beagle/dockerfile
       base: registry.cn-qingdao.aliyuncs.com/wod/debian:bullseye
       repo: wod/golang
-      version: "1.22.4"
+      version: "1.22.9"
       channel: loongnix
-      args: "TARGETOS=linux,TARGETARCH=amd64,GO_VERSION=1.22.4"
+      args: "TARGETOS=linux,TARGETARCH=amd64,GO_VERSION=1.22.9"
       registry: registry.cn-qingdao.aliyuncs.com
       registry_user:
         from_secret: REGISTRY_USER_ALIYUN
@@ -61,7 +61,7 @@ steps:
   - name: harbor
     image: registry.cn-qingdao.aliyuncs.com/wod/devops-docker-tag:1.0
     settings:
-      source: registry.cn-qingdao.aliyuncs.com/wod/golang:1.22.4-loongnix
+      source: registry.cn-qingdao.aliyuncs.com/wod/golang:1.22.9-loongnix
       target: registry.cn-qingdao.aliyuncs.com/wod/golang:1.22-loongnix
       registry: registry.cn-qingdao.aliyuncs.com
       registry_user:
@@ -92,14 +92,14 @@ get:
 
 ---
 kind: secret
-name: ACCESS_KEY_MINIO
+name: S3_ACCESS_KEY_ALIYUN
 get:
-  name: ACCESS_KEY_MINIO
+  name: S3_ACCESS_KEY_ALIYUN
   path: devops-secrets
 
 ---
 kind: secret
-name: SECRET_KEY_MINIO
+name: S3_SECRET_KEY_ALIYUN
 get:
-  name: SECRET_KEY_MINIO
+  name: S3_SECRET_KEY_ALIYUN
   path: devops-secrets
