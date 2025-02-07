@@ -16,12 +16,12 @@ ARG LOONGIX_GCC_VERSION=rc1.5
 RUN apt update -y && \
   apt install -y curl wget xz-utils git && \
   mkdir -p /tmp/loongarch64/gcc && \
-  curl https://cache.wodcloud.com/vscode/loongarch64/loongson-$LOONGIX_GCC-x86_64-loongarch64-linux-gnu-$LOONGIX_GCC_VERSION.tar.xz > /tmp/loongarch64/loongson-$LOONGIX_GCC-x86_64-loongarch64-linux-gnu-$LOONGIX_GCC_VERSION.tar.xz && \
+  curl https://cache.ali.wodcloud.com/vscode/loongarch64/loongson-$LOONGIX_GCC-x86_64-loongarch64-linux-gnu-$LOONGIX_GCC_VERSION.tar.xz > /tmp/loongarch64/loongson-$LOONGIX_GCC-x86_64-loongarch64-linux-gnu-$LOONGIX_GCC_VERSION.tar.xz && \
   tar -xvf /tmp/loongarch64/loongson-$LOONGIX_GCC-x86_64-loongarch64-linux-gnu-$LOONGIX_GCC_VERSION.tar.xz -C /tmp/loongarch64/gcc && \
   cp -r /tmp/loongarch64/gcc/loongson-$LOONGIX_GCC-x86_64-loongarch64-linux-gnu-$LOONGIX_GCC_VERSION/* /usr/ && \
   mkdir -p /tmp/loongarch64/golang && \
-  curl https://cache.wodcloud.com/vscode/loongarch64/go$GO_VERSION.linux-amd64.tar.gz > /tmp/loongarch64/go$GO_VERSION.linux-amd64.tar.gz && \
+  curl https://cache.ali.wodcloud.com/vscode/loongarch64/go$GO_VERSION.linux-amd64.tar.gz > /tmp/loongarch64/go$GO_VERSION.linux-amd64.tar.gz && \
   tar xzvf /tmp/loongarch64/go$GO_VERSION.linux-amd64.tar.gz -C /tmp/loongarch64/golang && \
   mv /tmp/loongarch64/golang/go /usr/local && \
   rm -rf /tmp/loongarch64 && \
-  apt install -y rsync pkg-config build-essential crossbuild-essential-arm64 crossbuild-essential-ppc64el crossbuild-essential-mips64el
+  apt install -y rsync pkg-config build-essential crossbuild-essential-arm64
