@@ -12,7 +12,7 @@ ENV PATH=$GOROOT/bin:$GOPATH/bin:$PATH
 
 ARG GO_VERSION=1.22.9
 ARG LOONGIX_GCC=gnu-toolchain-8.3
-ARG LOONGIX_GCC_VERSION=rc1.5
+ARG LOONGIX_GCC_VERSION=rc1.6
 RUN apt update -y && \
   apt install -y curl wget xz-utils git && \
   mkdir -p /tmp/loongarch64/gcc && \
