@@ -24,4 +24,4 @@ RUN apt update -y && \
   tar xzvf /tmp/loongarch64/go$GO_VERSION.linux-amd64.tar.gz -C /tmp/loongarch64/golang && \
   mv /tmp/loongarch64/golang/go /usr/local && \
   rm -rf /tmp/loongarch64 && \
-  apt install -y rsync pkg-config build-essential crossbuild-essential-arm64 crossbuild-essential-ppc64el crossbuild-essential-mips64el
+  apt install -y rsync pkg-config build-essential crossbuild-essential-arm64
