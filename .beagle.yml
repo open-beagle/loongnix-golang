@@ -44,7 +44,7 @@ steps:
       repo: wod/golang
       version: "1.23.3"
       channel: loongnix
-      args: "TARGETOS=linux,TARGETARCH=amd64,GO_VERSION=1.23.3"
+      args: "TARGETOS=linux,TARGETARCH=amd64,GO_VERSION=1.23.3,LOONGIX_GCC_VERSION=rc1.6"
       registry: registry.cn-qingdao.aliyuncs.com
       registry_user:
         from_secret: REGISTRY_USER_ALIYUN
