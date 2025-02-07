@@ -2,6 +2,10 @@
 kind: pipeline
 name: docker
 
+trigger:
+  branch:
+    - release-v1.23
+
 volumes:
   - name: docker
     host:
@@ -38,9 +42,9 @@ steps:
       dockerfile: .beagle/dockerfile
       base: registry.cn-qingdao.aliyuncs.com/wod/debian:bullseye
       repo: wod/golang
-      version: "1.22.9"
+      version: "1.23.3"
       channel: loongnix
-      args: "TARGETOS=linux,TARGETARCH=amd64,GO_VERSION=1.22.9"
+      args: "TARGETOS=linux,TARGETARCH=amd64,GO_VERSION=1.23.3"
       registry: registry.cn-qingdao.aliyuncs.com
       registry_user:
         from_secret: REGISTRY_USER_ALIYUN
@@ -50,6 +54,10 @@ steps:
 ---
 kind: pipeline
 name: harbor
+
+trigger:
+  branch:
+    - release-v1.23
 
 depends_on:
   - docker
@@ -61,8 +69,8 @@ steps:
   - name: harbor
     image: registry.cn-qingdao.aliyuncs.com/wod/devops-docker-tag:1.0
     settings:
-      source: registry.cn-qingdao.aliyuncs.com/wod/golang:1.22.9-loongnix
-      target: registry.cn-qingdao.aliyuncs.com/wod/golang:1.22-loongnix
+      source: registry.cn-qingdao.aliyuncs.com/wod/golang:1.23.3-loongnix
+      target: registry.cn-qingdao.aliyuncs.com/wod/golang:1.23-loongnix
       registry: registry.cn-qingdao.aliyuncs.com
       registry_user:
         from_secret: REGISTRY_USER_ALIYUN

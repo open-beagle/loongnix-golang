@@ -17,9 +17,9 @@ echo "github.com/open-beagle/loongnix-golang" > ./.tmp/README.md
 
 # golang
 # http://www.loongnix.cn/zh/toolchain/Golang/
-# http://ftp.loongnix.cn/toolchain/golang/go-1.22/abi1.0/go1.22.9.linux-amd64.tar.gz
-export GO_VERSION=1.22.9 && \
-curl http://ftp.loongnix.cn/toolchain/golang/go-1.22/abi1.0/go$GO_VERSION.linux-amd64.tar.gz > ./.tmp/go$GO_VERSION.linux-amd64.tar.gz && \
+# http://ftp.loongnix.cn/toolchain/golang/go-1.23/abi1.0/go1.23.3.linux-amd64.tar.gz
+export GO_VERSION=1.23.3 && \
+curl http://ftp.loongnix.cn/toolchain/golang/go-1.23/abi1.0/go$GO_VERSION.linux-amd64.tar.gz > ./.tmp/go$GO_VERSION.linux-amd64.tar.gz && \
 mc cp ./.tmp/go$GO_VERSION.linux-amd64.tar.gz aliyun/vscode/loongarch64/go$GO_VERSION.linux-amd64.tar.gz
 
 # gcc8
