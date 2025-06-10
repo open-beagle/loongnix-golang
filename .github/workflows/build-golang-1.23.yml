@@ -42,10 +42,10 @@ jobs:
             ${{ env.REGISTRY_ALIYUN }}/wod/golang:${{ env.GOLANG_VERSION }}-loongnix
             ${{ env.REGISTRY_ALIYUN }}/wod/golang:${{ env.GOLANG_MAJOR_VERSION }}-loongnix
           build-args: |
-            BASE="debian:bullseye"
-            VERSION="${{ env.GOLANG_MAJOR_VERSION }}"
-            GO_VERSION="${{ env.GOLANG_VERSION }}"
-            LOONGIX_GCC="${{ env.LOONGIX_GCC }}"
-            LOONGIX_GCC_VERSION="${{ env.LOONGIX_GCC_VERSION }}"
+            BASE=debian:bullseye
+            VERSION=${{ env.GOLANG_MAJOR_VERSION }}
+            GO_VERSION=${{ env.GOLANG_VERSION }}
+            LOONGIX_GCC=${{ env.LOONGIX_GCC }}
+            LOONGIX_GCC_VERSION=${{ env.LOONGIX_GCC_VERSION }}
           provenance: false
           sbom: false
