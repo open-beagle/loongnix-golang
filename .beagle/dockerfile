@@ -3,7 +3,7 @@ FROM $BASE
 
 ARG AUTHOR
 ARG VERSION
-LABEL maintainer=$AUTHOR version=$VERSION
+LABEL maintainer=mengkzhaoyun@gmail.com version=$VERSION
 
 ENV GOPROXY=https://goproxy.cn
 ENV GOROOT=/usr/local/go
